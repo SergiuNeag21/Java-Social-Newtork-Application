@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.socialnetworkjava2.MainViewController">
+   <children>
+      <Label fx:id="fullUserNameLabel" layoutX="561.0" layoutY="18.0" prefHeight="46.0" prefWidth="339.0" text="Your account">
+         <font>
+            <Font name="Showcard Gothic" size="30.0" />
+         </font></Label>
+      <TableView fx:id="userFriendsTable" layoutX="279.0" layoutY="276.0" prefHeight="484.0" prefWidth="622.0" style="-fx-background-color: PALETURQUOISE PALETURQUOISE;">
+        <columns>
+          <TableColumn fx:id="columnX" prefWidth="207.0" style="-fx-background-color: PALETURQUOISE;" text="Column x" />
+            <TableColumn fx:id="columnY" prefWidth="206.0" style="-fx-background-color: PALETURQUOISE PALETURQUOISE;" text="Column y" />
+            <TableColumn fx:id="columnZ" minWidth="0.0" prefWidth="216.0" style="-fx-background-color: PALETURQUOISE PALETURQUOISE;" text="Column z" />
+        </columns>
+      </TableView>
+      <Pane prefHeight="760.0" prefWidth="280.0" style="-fx-background-color: #015660;">
+         <children>      <Button layoutX="45.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleFriendRequest" prefHeight="50.0" prefWidth="191.0" text="   Friend request">
+               <font>
+                  <Font name="Showcard Gothic" size="15.0" />
+               </font></Button>
+            <Button layoutX="45.0" layoutY="296.0" mnemonicParsing="false" onAction="#handleShowUserFriends" prefHeight="50.0" prefWidth="191.0" style="-fx-background-color: white;" text="Friends">
+               <font>
+                  <Font name="Showcard Gothic" size="15.0" />
+               </font></Button>
+            <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="51.0" layoutY="302.0">
+               <image>
+                  <Image url="@photos/pngFriendsLogo.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="45.0" layoutY="503.0" mnemonicParsing="false" onAction="#handleSearchFriendTable" prefHeight="50.0" prefWidth="191.0" text="Find friends">
+               <font>
+                  <Font name="Showcard Gothic" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="15.0" layoutY="687.0" mnemonicParsing="false" onAction="#handleGoBack" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="53.0" nodeOrientation="RIGHT_TO_LEFT">
+                     <image>
+                        <Image url="@photos/logoutLogo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="50.0" fitWidth="47.0" layoutX="47.0" layoutY="503.0">
+               <image>
+                  <Image url="@photos/findFriendsLogo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="51.0" layoutY="411.0">
+               <image>
+                  <Image url="@photos/requestLogo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="164.0" fitWidth="150.0" layoutX="65.0" layoutY="19.0">
+               <image>
+                  <Image url="@photos/logo7lightblue.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Pane layoutX="279.0" layoutY="115.0" prefHeight="77.0" prefWidth="622.0" style="-fx-background-color: #1290a3;">
+         <children>
+            <Text fx:id="menuText" layoutX="119.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" textAlignment="CENTER" wrappingWidth="383.99999628961086">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <ImageView fitHeight="67.0" fitWidth="72.0" layoutX="471.0" layoutY="8.0">
+         <image>
+            <Image url="@photos/accountLogo3.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="sendRequestButton" layoutX="391.0" layoutY="216.0" mnemonicParsing="false" onAction="#handleSendRequest" prefHeight="38.0" prefWidth="164.0" style="-fx-background-color: #1eb500;" text="Send request">
+         <font>
+            <Font name="Showcard Gothic" size="15.0" />
+         </font></Button>
+      <Button fx:id="unsendRequestButton" layoutX="659.0" layoutY="216.0" mnemonicParsing="false" onAction="#unsendFriendRequest" prefHeight="38.0" prefWidth="164.0" style="-fx-background-color: #ff2d19;" text="Unsend request">
+         <font>
+            <Font name="Showcard Gothic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="acceptRequestButton" layoutX="391.0" layoutY="216.0" mnemonicParsing="false" onAction="#acceptFriendRequest" prefHeight="38.0" prefWidth="164.0" style="-fx-background-color: #1eb500;" text="Accept">
+         <font>
+            <Font name="Showcard Gothic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteRequestButton" layoutX="659.0" layoutY="216.0" mnemonicParsing="false" onAction="#deleteReceivedFriendRequest" prefHeight="38.0" prefWidth="164.0" style="-fx-background-color: #ff2d19;" text="Delete">
+         <font>
+            <Font name="Showcard Gothic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteFriendButton" layoutX="659.0" layoutY="216.0" mnemonicParsing="false" onAction="#handleDeleteFriendship" prefHeight="38.0" prefWidth="164.0" style="-fx-background-color: #ff2d19;" text="Delete">
+         <font>
+            <Font name="Showcard Gothic" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
